@@ -8,11 +8,9 @@ class CreateStudents < ActiveRecord::Migration
       attribute.string :first_name
       attribute.string :last_name
       attribute.string :gender
-      attribute.date :birthdate
+      attribute.date   :birthday
       attribute.string :email
       attribute.string :phone
-
-      attribute.timestamps
     end
   end
 end
