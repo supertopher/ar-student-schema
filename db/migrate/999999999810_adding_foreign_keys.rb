@@ -6,11 +6,7 @@ require_relative '../config'
 class AddingForeignKeys < ActiveRecord::Migration
 
   def change
-    execute <<-SQL
-      ALTER TABLE students
-        ADD CONSTRAINT fk_students_teachers
-        FOREIGN KEY (teacher_id)
-        REFERENCES teachers(id);
-    SQL
+
+    add_column :students, :teacher_id, :string
   end
 end
