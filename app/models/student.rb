@@ -3,7 +3,6 @@ require 'date'
 
 class Student < ActiveRecord::Base
 
-  belongs_to :teachers, foreign_key: "teacher_id"
 
   validates :email, :format => {  :with => /^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,4})$/,
                                   :message => "Please enter a valid email address."}
